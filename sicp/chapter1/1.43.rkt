@@ -17,6 +17,6 @@
 (define (repited func times)
   (if (= times 1)
       (lambda (x) (func x))
-      (lambda (x) (func ((repited func (- times 1)) x)))))
+      (lambda (x) (compose (lambda (x) (func x)) (repited func (- times 1)) x))))
 
 (check-equal? ((repited square 2) 5) 625)
