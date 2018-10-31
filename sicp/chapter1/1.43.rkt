@@ -14,3 +14,5 @@
       (compose func (repited func (- times 1)))))
 
 (check-equal? ((repited square 2) 5) 625)
+
+(provide repited)
