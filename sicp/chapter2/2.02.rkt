@@ -18,15 +18,6 @@
               (average (y-point (start-segment segment))
                        (y-point (end-segment segment)))))
 
-(define (print-point p)
-  (newline)
-  (display "(")
-  (display (x-point p))
-  (display ",")
-  (display (y-point p))
-  (display ")"))
-
 (define test-segment (make-segment (make-point -2 -5) (make-point 2 3)))
 
-
-(check-equal? (print-point (midpoint-segment test-segment)) (cons 0 -1))
+(check-equal? (midpoint-segment test-segment) (cons 0 -1))
