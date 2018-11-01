@@ -21,3 +21,7 @@
 (define test-segment (make-segment (make-point -2 -5) (make-point 2 3)))
 
 (check-equal? (midpoint-segment test-segment) (cons 0 -1))
+
+(provide make-point)
+(provide x-point)
+(provide y-point)
