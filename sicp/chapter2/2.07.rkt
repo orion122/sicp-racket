@@ -14,3 +14,5 @@
 
 (check-equal? (upper-bound (make-interval 7 2)) 7)
 (check-equal? (lower-bound (make-interval 7 2)) 2)
+
+(provide (all-defined-out))
