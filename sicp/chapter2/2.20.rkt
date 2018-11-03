@@ -10,10 +10,10 @@
         odd?))
   (define (iter others acc)
     (if (null? others)
-        (cons first (reverse acc))
+        (reverse acc)
         (cond ((parity-cond? (car others)) (iter (cdr others) (cons (car others) acc)))
               (else (iter (cdr others) acc)))))
-  (iter others null))
+  (cons first (iter others null)))
 
 
 (check-equal? (same-parity 1 2 3 4 5 6 7) (list 1 3 5 7))
