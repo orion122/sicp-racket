@@ -13,3 +13,5 @@
 
 
 (check-equal? (reverse a) (list 4 3 2 1))
+
+(provide reverse)
